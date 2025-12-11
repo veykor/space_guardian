@@ -1,0 +1,35 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/styles.uss?fileID=7433441132597879392&amp;guid=174f522786555d146b3cafe29242acfc&amp;type=3#styles" />
+    <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: row;">
+        <ui:Label text="SPACE GUARDIAN" name="title" class="text" style="position: absolute; top: 0; right: 0%; left: 0%; height: 50%; -unity-text-align: middle-center; font-size: 112px; -unity-text-outline-color: rgb(121, 121, 121); -unity-text-outline-width: 5px; letter-spacing: 24px; word-spacing: 0;" />
+        <ui:VisualElement name="left" style="flex-grow: 1; width: 25%; flex-direction: column;">
+            <ui:VisualElement style="flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="middle" style="flex-grow: 1;">
+            <ui:VisualElement name="buttonsframe" style="flex-grow: 1;">
+                <ui:VisualElement name="buttonsdialog" style="flex-grow: 1; background-color: rgb(162, 162, 162); border-top-width: 20px; border-right-width: 20px; border-bottom-width: 20px; border-left-width: 20px; border-top-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; border-left-color: rgb(121, 121, 121); border-right-color: rgb(121, 121, 121); border-top-color: rgb(121, 121, 121); border-bottom-color: rgb(121, 121, 121); margin-top: 150%; margin-bottom: 30%; align-content: center; justify-content: center;">
+                    <ui:Button text="Start" name="start" class="startbutton" style="height: 45%;" />
+                    <ui:Button text="Quit" name="exit" class="startbutton" style="height: 45%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="right" style="flex-grow: 1; width: 25%;">
+            <ui:VisualElement name="volumeframe" style="flex-grow: 1;">
+                <ui:VisualElement name="volumedialog" style="flex-grow: 1; width: 30%; align-self: flex-end; margin-top: 110%; margin-bottom: 15%;">
+                    <ui:VisualElement name="music" style="flex-grow: 1;" />
+                    <ui:VisualElement name="sfx" style="flex-grow: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="blackscreen" enabled="true" class="backblack" style="flex-grow: 1; position: absolute; right: 0; top: 0; left: 0; bottom: 0; display: flex;">
+        <ui:Label name="introtext" style="right: 0; bottom: 0; left: 0; top: 0; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&amp;guid=8a2b9e2a607dd2143b58c44bc32410b4&amp;type=3#Electronic Highway Sign&quot;); color: rgb(229, 229, 229); -unity-text-align: middle-center; position: absolute; font-size: 60%; white-space: normal; padding-top: 10%; padding-right: 10%; padding-bottom: 10%; padding-left: 10%;">
+            <Bindings>
+                <ui:DataBinding property="text" data-source-path="introText" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:Label>
+        <Bindings>
+            <ui:DataBinding property="style.transitionDuration" data-source-path="blackScreenTransitionDuration" binding-mode="ToTarget" />
+        </Bindings>
+    </ui:VisualElement>
+</ui:UXML>

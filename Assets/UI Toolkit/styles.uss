@@ -1,0 +1,64 @@
+VisualElement {
+}
+
+.backblack {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+}
+
+.text {
+    -unity-font-definition: url("project://database/Assets/TextMesh%20Pro/Examples%20&%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&guid=8a2b9e2a607dd2143b58c44bc32410b4&type=3#Electronic Highway Sign");
+    font-size: 450%;
+    -unity-font-style: bold;
+}
+
+.backred {
+    background-color: rgb(171, 14, 14);
+}
+
+.marginlife {
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    padding-right: 1.78%;
+    padding-left: 1.78%;
+}
+
+.lifeborder {
+    border-left-color: rgb(48, 81, 130);
+    border-right-color: rgb(48, 81, 130);
+    border-top-color: rgb(48, 81, 130);
+    border-bottom-color: rgb(48, 81, 130);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+}
+
+.button {
+    height: 7%;
+    width: 6%;
+    margin-top: 2%;
+    margin-right: 0.1%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+}
+
+.startbutton {
+    -unity-font-definition: url("project://database/Assets/TextMesh%20Pro/Examples%20&%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&guid=8a2b9e2a607dd2143b58c44bc32410b4&type=3#Electronic Highway Sign");
+    -unity-font-style: bold;
+    font-size: 300%;
+}
+
+.transition2s {
+    transition-duration: 2s;
+}
+
+.translateleft300 {
+    translate: -300% 0;
+}
+
+.translateright300 {
+    translate: 300% 0;
+}

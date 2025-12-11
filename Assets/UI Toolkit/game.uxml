@@ -1,0 +1,72 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/styles.uss?fileID=7433441132597879392&amp;guid=174f522786555d146b3cafe29242acfc&amp;type=3#styles" />
+    <ui:VisualElement name="root" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/resources/gameui.png?fileID=2800000&amp;guid=8ff252e4af3d2cf4886223a52d2ed5be&amp;type=3#gameui&quot;); flex-direction: row;">
+        <ui:VisualElement name="tutorial" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/resources/tutorialaseprite.png?fileID=2800000&amp;guid=407c5bbc16832ee4ba94a6506c9bfe50&amp;type=3#tutorialaseprite&quot;); width: 16%; height: 28%; top: 0; left: 0; right: 0; bottom: 0; margin-top: 20%; margin-right: 40%; margin-bottom: 20%; margin-left: 40%; transition-duration: 5s;" />
+        <ui:VisualElement name="lifestatus" style="flex-grow: 1; flex-direction: row; width: 120%;">
+            <ui:Label text="Navis\nYAT" name="playernames" parse-escape-sequences="true" class="text" style="width: 27%; -unity-text-align: upper-right; padding-left: 2px; padding-right: 15px; padding-top: 7px; letter-spacing: 0; word-spacing: 0; -unity-paragraph-spacing: 22px; -unity-font-style: bold;" />
+            <ui:VisualElement name="lifecontainer" class="backblack" style="flex-grow: 1; height: 14.3%; background-image: none;">
+                <ui:VisualElement name="navislife" class="lifeborder" style="flex-grow: 1; flex-direction: row; height: 4%; width: 100%; padding-left: 0; padding-right: 50%; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; transition-property: padding-right; transition-duration: 200ms;">
+                    <ui:VisualElement name="lifeval" class="backred" style="flex-grow: 1; flex-direction: row; width: auto;" />
+                    <Bindings>
+                        <ui:DataBinding property="style.paddingRight" data-source-path="navisLife" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:VisualElement>
+                <ui:VisualElement name="yatlife" enabled="true" class="lifeborder" style="flex-grow: 1; flex-direction: row; height: 4%; width: 100%; padding-top: 0%; transition-property: padding-right; transition-duration: 200ms;">
+                    <ui:VisualElement name="lifeval" class="backred" style="flex-grow: 1; flex-direction: row; width: auto; margin-right: 0%;" />
+                    <Bindings>
+                        <ui:DataBinding property="style.paddingRight" data-source-path="yatLife" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="points" style="flex-grow: 1; width: 100%; flex-direction: row; padding-top: 2%; padding-left: 2%;">
+            <ui:Label text="Points" name="points" selectable="false" focusable="false" class="text" />
+            <ui:Label text="00000000" name="pointval" class="text" style="padding-top: 4px; padding-right: 2px; padding-left: 30px;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="totalPoints" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+        <ui:VisualElement name="buttonsframe" style="flex-grow: 1; width: 45%; flex-direction: row;">
+            <ui:VisualElement name="buttondialog" style="flex-grow: 1; flex-direction: row; margin-top: 10%; margin-right: 0%; margin-bottom: 295%; margin-left: 0%;">
+                <ui:Button text="Pause" name="pause" style="white-space: nowrap; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&amp;guid=8a2b9e2a607dd2143b58c44bc32410b4&amp;type=3#Electronic Highway Sign&quot;); -unity-font-style: bold; font-size: 22px; margin-right: 10px; margin-left: 20px; width: 40%;" />
+                <ui:Button text="EXIT" name="quit" style="-unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&amp;guid=8a2b9e2a607dd2143b58c44bc32410b4&amp;type=3#Electronic Highway Sign&quot;); font-size: 22px; -unity-font-style: bold; margin-right: 20px; margin-left: 10px; width: 40%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="progress" style="flex-grow: 1; position: absolute; margin-top: 0%; margin-right: 0%; margin-bottom: 0%; margin-left: 0%; bottom: 0%; width: 100%; height: 11%; padding-left: 11%;">
+            <ui:VisualElement name="ship" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/templates/entities/player/player-body.png?fileID=-5587148296536462964&amp;guid=e8597d79fa8e3b040ac6041c14028225&amp;type=3#player-body_0&quot;); width: 60px; background-size: 100% 35%; padding-left: 0%;" />
+            <Bindings>
+                <ui:DataBinding property="style.paddingLeft" data-source-path="levelProgress" binding-mode="ToTarget" />
+            </Bindings>
+        </ui:VisualElement>
+        <ui:VisualElement name="levelMsg" style="flex-grow: 1; position: absolute; width: 100%; height: 15%; margin-top: 25%; padding-right: 38%; padding-left: 38%;">
+            <ui:VisualElement name="levelframe" class="transition2s" style="flex-grow: 1; background-color: rgb(178, 178, 178); padding-top: 2%; padding-bottom: 2%; padding-left: 2%; flex-direction: row; border-left-color: rgb(121, 121, 121); border-right-color: rgb(121, 121, 121); border-top-color: rgb(121, 121, 121); border-bottom-color: rgb(121, 121, 121); border-top-width: 20px; border-right-width: 20px; border-bottom-width: 20px; border-left-width: 20px; border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; left: auto; justify-content: space-around; align-self: center; width: 100%; translate: -500% 0;">
+                <ui:Label text="Level" name="level" class="text" style="white-space: nowrap; -unity-text-align: middle-left; flex-direction: row; width: auto; left: 0; padding-left: 5%;" />
+                <ui:Label text="1" name="levelVal" class="text" style="-unity-text-align: middle-center; width: 40%; right: 0; margin-right: 5%;">
+                    <Bindings>
+                        <ui:DataBinding property="text" data-source-path="level" binding-mode="ToTarget" />
+                    </Bindings>
+                </ui:Label>
+                <Bindings>
+                    <ui:DataBinding property="style.translate" data-source-path="lvlChartPosition" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="blackscreen" enabled="true" class="transition2s backblack" style="flex-grow: 1; position: absolute; right: 0; top: 0; left: 0; bottom: 0; display: flex;">
+            <ui:Label name="introtext" style="right: 0; bottom: 0; left: 0; top: 0; -unity-font-definition: url(&quot;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Electronic%20Highway%20Sign.TTF?fileID=12800000&amp;guid=8a2b9e2a607dd2143b58c44bc32410b4&amp;type=3#Electronic Highway Sign&quot;); color: rgb(229, 229, 229); -unity-text-align: middle-center; position: absolute; font-size: 60%; white-space: normal; padding-top: 10%; padding-right: 10%; padding-bottom: 10%; padding-left: 10%;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="outroText" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+        <ui:VisualElement name="gameoverframe" style="flex-grow: 1; margin-top: 20%; margin-right: 30%; margin-bottom: 20%; margin-left: 30%; position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: none; visibility: visible; overflow: visible; opacity: 1;">
+            <ui:VisualElement name="gameoverdialog" style="flex-grow: 1; background-color: rgb(162, 162, 162); border-left-color: rgb(121, 121, 121); border-right-color: rgb(121, 121, 121); border-top-color: rgb(121, 121, 121); border-bottom-color: rgb(121, 121, 121); border-top-width: 20px; border-right-width: 20px; border-bottom-width: 20px; border-left-width: 20px; border-top-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px; border-bottom-left-radius: 30px; flex-direction: column;">
+                <ui:Label text="Game Over" name="gameovertext" class="text" style="left: 0; right: 0; -unity-text-align: upper-center; margin-top: 4%; margin-right: 4%; margin-bottom: 4%; margin-left: 4%;" />
+                <ui:VisualElement name="gameoverbuttons" style="flex-grow: 1; flex-direction: row; justify-content: center; padding-top: 3%; padding-right: 3%; padding-bottom: 3%; padding-left: 3%;">
+                    <ui:Button text="retry" name="retry" class="text" style="font-size: 40px; width: 30%; margin-right: 20px; margin-left: 20px;" />
+                    <ui:Button text="quit" name="quit2" class="text" style="font-size: 40px; width: 30%; margin-right: 20px; margin-left: 20px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
